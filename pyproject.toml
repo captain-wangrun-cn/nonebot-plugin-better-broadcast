@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot_plugin_better_broadcast"
-version = "1.0.5"
+version = "1.0.6"
 description = "nonebot2 plugin, boardcast your message to every groups"
 authors = ["WR <wangrun114514@foxmail.com>"]
 license = "GPL-3.0"

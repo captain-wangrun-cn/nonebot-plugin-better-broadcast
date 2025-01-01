@@ -1,4 +1,4 @@
-import json
+import json,asyncio,random
 from nonebot import on_command, require, get_plugin_config, logger
 from nonebot.plugin import PluginMetadata
 from nonebot.permission import SUPERUSER
@@ -41,8 +41,12 @@ async def _(bot: Bot):
 
     group_list = await bot.get_group_list()
     blacklist = plugin_config.bc_blacklist
+    delay = plugin_config.bc_random_delay
     fail,success = 0,0
+
     for group in group_list:
+        if delay: await asyncio.sleep(random.randint(1,3))  # 随机延迟
+
         gid = group["group_id"]
         if str(gid) not in blacklist:
             # 不在黑名单内，发送消息
