@@ -26,9 +26,6 @@ _✨ 将你的信息广播到所有群聊，支持多种类型 ✨_
 
 将你的信息广播到所有群聊，支持多种类型
 
-> [!IMPORTANT]
-> 如果需要广播聊天记录，请使用Napcat，因为使用了forward_group_single_msg接口（本人小白awa）
-
 ## 💿 安装
 
 <details open>
