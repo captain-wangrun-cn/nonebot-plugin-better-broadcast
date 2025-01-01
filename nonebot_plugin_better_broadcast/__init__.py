@@ -11,7 +11,7 @@ from .config import Config
 __plugin_meta__ = PluginMetadata(
     name="更好的广播",
     description="将你的信息广播到所有群聊，支持多种类型",
-    usage="发送",
+    usage="发送广播",
     type="application",
     homepage="https://github.com/captain-wangrun-cn/nonebot-plugin-better-broadcast",
     config=Config,
@@ -86,6 +86,7 @@ async def _(bot: Bot):
                 logger.error(ex)
                 fail += 1
         
+        last_bc_msg_id.clear()
         await bc.finish(f"已尝试撤回广播\n成功撤回了{success}个群聊\n有{fail}个群撤回失败（可能是因为已经超时）")
 
 
